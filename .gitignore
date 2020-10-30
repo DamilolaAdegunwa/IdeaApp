@@ -5,3 +5,5 @@
 /.vs/IdeaApp
 /bin/Debug/netcoreapp3.1
 /obj
+/IdeaApp.Data/obj
+/IdeaApp.Data/bin/Debug/netstandard2.0
