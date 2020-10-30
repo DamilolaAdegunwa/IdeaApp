@@ -47,7 +47,7 @@ namespace IdeaApp
             });
             services.AddDefaultIdentity<IdentityUser>(options => 
             {
-
+                
             }).AddEntityFrameworkStores<IdeaAppDbContext>();
             
         }

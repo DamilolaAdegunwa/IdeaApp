@@ -5,9 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entity\" />
+    <None Remove="Entity\Audit\Audit.cs~RFc4d5ce0.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="DTO\" />
+    <Folder Include="Enum\" />
     <Folder Include="ViewModel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
 
 </Project>
