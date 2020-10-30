@@ -5,18 +5,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="IdeaApp.Core\**" />
     <Compile Remove="IdeaApp.Data\**" />
     <Compile Remove="IdeaApp.Service\**" />
+    <Content Remove="IdeaApp.Core\**" />
     <Content Remove="IdeaApp.Data\**" />
     <Content Remove="IdeaApp.Service\**" />
+    <EmbeddedResource Remove="IdeaApp.Core\**" />
     <EmbeddedResource Remove="IdeaApp.Data\**" />
     <EmbeddedResource Remove="IdeaApp.Service\**" />
+    <None Remove="IdeaApp.Core\**" />
     <None Remove="IdeaApp.Data\**" />
     <None Remove="IdeaApp.Service\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="IdeaApp.Data\IdeaApp.Data.csproj" />
   </ItemGroup>
 
 
