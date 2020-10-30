@@ -24,7 +24,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="IdeaApp.Data\IdeaApp.Data.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="IdeaApp.Service\IdeaApp.Service.csproj" />
   </ItemGroup>
 
 

@@ -9,3 +9,6 @@
 /IdeaApp.Data/bin/Debug/netstandard2.0
 /IdeaApp.Service/bin/Debug/netstandard2.0
 /IdeaApp.Service/obj
+/IdeaApp.Service/bin/Debug/netstandard2.1
+/IdeaApp.Data/bin/Debug/netstandard2.1
+/IdeaApp.Core/bin/Debug

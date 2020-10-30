@@ -1,0 +1,8 @@
+C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\bin\Debug\netstandard2.0\IdeaApp.Core.deps.json
+C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\bin\Debug\netstandard2.0\IdeaApp.Core.dll
+C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\bin\Debug\netstandard2.0\IdeaApp.Core.pdb
+C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\obj\Debug\netstandard2.0\IdeaApp.Core.csprojAssemblyReference.cache
+C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\obj\Debug\netstandard2.0\IdeaApp.Core.AssemblyInfoInputs.cache
+C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\obj\Debug\netstandard2.0\IdeaApp.Core.AssemblyInfo.cs
+C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\obj\Debug\netstandard2.0\IdeaApp.Core.dll
+C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\obj\Debug\netstandard2.0\IdeaApp.Core.pdb
