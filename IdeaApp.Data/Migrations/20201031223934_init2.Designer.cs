@@ -4,14 +4,16 @@ using IdeaApp.Data.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IdeaApp.Data.Migrations
 {
     [DbContext(typeof(IdeaAppDbContext))]
-    partial class IdeaAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201031223934_init2")]
+    partial class init2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -180,15 +182,10 @@ namespace IdeaApp.Data.Migrations
                     b.Property<string>("Message")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("PostId")
-                        .HasColumnType("bigint");
-
                     b.Property<long>("Upvote")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PostId");
 
                     b.ToTable("Comments");
                 });
@@ -266,12 +263,7 @@ namespace IdeaApp.Data.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("UserId")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Posts");
                 });
@@ -374,9 +366,6 @@ namespace IdeaApp.Data.Migrations
 
                     b.Property<string>("Fullname")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("IdentityUserId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -603,22 +592,6 @@ namespace IdeaApp.Data.Migrations
                 });
 
             modelBuilder.Entity("IdeaApp.Core.Entity.BrainstormSessionMember", b =>
-                {
-                    b.HasOne("IdeaApp.Core.Entity.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("IdeaApp.Core.Entity.Comment", b =>
-                {
-                    b.HasOne("IdeaApp.Core.Entity.Post", null)
-                        .WithMany("Comments")
-                        .HasForeignKey("PostId");
-                });
-
-            modelBuilder.Entity("IdeaApp.Core.Entity.Post", b =>
                 {
                     b.HasOne("IdeaApp.Core.Entity.User", "User")
                         .WithMany()

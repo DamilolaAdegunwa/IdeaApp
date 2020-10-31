@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace IdeaApp.Core.Entity.Audit
+namespace IdeaApp.Core.Entity
 {
-    public interface IEntity
+    public interface IEntity<TPrimaryKey>
     {
+        TPrimaryKey Id { get; set; }
     }
     public interface ICreationAudited<TUser>
     {
@@ -24,15 +25,27 @@ namespace IdeaApp.Core.Entity.Audit
         DateTimeOffset? LastModificationTime { get; set; }
         TUser LastModifierUserId { get; set; }
     }
-    public abstract class AuditedEntity
+    public abstract class FullAuditedEntity : IEntity<long>, ICreationAudited<long>, IDeletionAudited<long?>, IModificationAudited<long?>
     {
         public virtual DateTimeOffset CreationTime { get; set; }
-        public virtual long? CreatorUserId { get; set; }//TUser
+        public virtual long CreatorUserId { get; set; }//TUser
         public virtual long? DeleterUserId { get; set; }//TUser
-        public virtual DateTimeOffset? DeletionTime { get; set; }//TUser
-        public virtual long Id { get; set; }//TEntityUser
+        public virtual DateTimeOffset? DeletionTime { get; set; }
+        public virtual long Id { get; set; }//TPrimaryKey
         public virtual bool IsDeleted { get; set; }
         public virtual DateTimeOffset? LastModificationTime { get; set; }
         public virtual long? LastModifierUserId { get; set; }//TUser
+    }
+    public abstract class FullAuditedEntity<TPrimaryKey, CreationUser, DeletionUser, ModificationUser> : 
+        IEntity<TPrimaryKey>, ICreationAudited<CreationUser>, IDeletionAudited<DeletionUser>, IModificationAudited<ModificationUser>
+    {
+        public virtual DateTimeOffset CreationTime { get; set; }
+        public virtual CreationUser CreatorUserId { get; set; }//TUser
+        public virtual DeletionUser DeleterUserId { get; set; }//TUser
+        public virtual DateTimeOffset? DeletionTime { get; set; }
+        public virtual TPrimaryKey Id { get; set; }//TPrimaryKey
+        public virtual bool IsDeleted { get; set; }
+        public virtual DateTimeOffset? LastModificationTime { get; set; }
+        public virtual ModificationUser LastModifierUserId { get; set; }//TUser
     }
 }
