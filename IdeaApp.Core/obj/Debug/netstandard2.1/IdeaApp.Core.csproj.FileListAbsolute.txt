@@ -5,3 +5,4 @@ C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\obj\Debug\netstandard2.1\Ide
 C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\obj\Debug\netstandard2.1\IdeaApp.Core.AssemblyInfo.cs
 C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\obj\Debug\netstandard2.1\IdeaApp.Core.dll
 C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\obj\Debug\netstandard2.1\IdeaApp.Core.pdb
+C:\Users\DAMILOLA\source\repos\IdeaApp\IdeaApp.Core\obj\Debug\netstandard2.1\IdeaApp.Core.csprojAssemblyReference.cache

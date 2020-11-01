@@ -5,16 +5,16 @@ using System.Text;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using IdeaApp.Core.Entity;
-
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore.Design;
 namespace IdeaApp.Data.DatabaseContext
 {
     public class IdeaAppDbContext : IdentityDbContext
     {
-        public IdeaAppDbContext(DbContextOptions<IdeaAppDbContext> options): base(options)
+        public IdeaAppDbContext()
         {
 
         }
-
         #region DbSet
         public DbSet<Attachment> Attachments { get; set; }
         public DbSet<BrainstormSession> BrainstormSessions { get; set; }
